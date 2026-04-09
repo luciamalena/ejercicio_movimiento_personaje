@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b2w6qkre1wdyt"]
+
+[ext_resource type="PackedScene" uid="uid://dinq10h88spr" path="res://jugador/escenas/jugador.tscn" id="1_bvef3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvef3"]
+size = Vector2(574, 105)
+
+[node name="Nivel1" type="Node2D" unique_id=1290139011]
+
+[node name="Jugador" parent="." unique_id=751807222 instance=ExtResource("1_bvef3")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1952108792]
+zoom = Vector2(2, 2)
+
+[node name="Plataforma" type="StaticBody2D" parent="." unique_id=1988796938]
+
+[node name="ColorRect" type="ColorRect" parent="Plataforma" unique_id=1704705555]
+offset_left = -285.0
+offset_top = 56.0
+offset_right = 289.0
+offset_bottom = 163.0
+color = Color(0, 0.7059704, 0.77873075, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma" unique_id=710013744]
+position = Vector2(0, 108)
+shape = SubResource("RectangleShape2D_bvef3")

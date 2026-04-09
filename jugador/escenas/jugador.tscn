@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://yv2tg3lq7x35" path="res://jugador/sprites/Player_hollow_knight.png" id="2_0iyn5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8f73"]
+size = Vector2(12, 23)
 
 [sub_resource type="Animation" id="Animation_wqg3x"]
 length = 0.001
@@ -102,9 +103,11 @@ _data = {
 script = ExtResource("1_dgngu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1045283784]
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_t8f73")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=80343315]
+position = Vector2(0, -9)
 texture = ExtResource("2_0iyn5")
 hframes = 8
 vframes = 7
