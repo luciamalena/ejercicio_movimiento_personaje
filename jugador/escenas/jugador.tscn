@@ -101,6 +101,8 @@ _data = {
 
 [node name="Jugador" type="CharacterBody2D" unique_id=751807222]
 script = ExtResource("1_dgngu")
+velocidad_salto = 200.0
+aceleracion = 350.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1045283784]
 position = Vector2(0, 1.5)
