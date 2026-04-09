@@ -12,7 +12,11 @@ var movimiento = Vector2()
 @export var cantidad_salto= 2
 
 func _physics_process(delta: float) -> void:
-	velocity.y += gravedad * delta 
+	if velocity.y > 0:
+		velocity.y += gravedad * 1.3 * delta  
+	else:
+		velocity.y += gravedad * delta
+	
 	movimiento_horizontal()
 	logica_salto()
 	set_animations()
@@ -41,18 +45,12 @@ func flip():
 		
 func logica_salto():
 	if is_on_floor():
-		cantidad_salto= 2
-	if Input.is_action_just_pressed("salto"):
+		cantidad_salto = 1  
+	
+	if Input.is_action_just_pressed("salto") and cantidad_salto > 0:
+		velocity.y = -velocidad_salto
 		cantidad_salto -= 1
-		velocity.y -= lerp(velocidad_salto, aceleracion, 0.1)
-		
-	if not is_on_floor():
-		if cantidad_salto > 0:
-			if Input.is_action_just_pressed("salto"):
-				velocity.y -= lerp(velocidad_salto, aceleracion, 1)
-				
-			if Input.is_action_just_released("salto"):
-				velocity.y = lerp(velocity.y, gravedad, 0.2)
-				velocity.y *= 0.3
-	else:
-		return
+	
+	
+	if Input.is_action_just_released("salto") and velocity.y < 0:
+		velocity.y *= 0.4
