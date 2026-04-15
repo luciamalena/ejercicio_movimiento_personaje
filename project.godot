@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Ejercicio movimiento 2D"
+config/name="Ejercicio animacion 2D"
 run/main_scene="uid://b2w6qkre1wdyt"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"

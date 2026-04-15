@@ -14,6 +14,7 @@ size = Vector2(52, 27)
 [node name="Nivel1" type="Node2D" unique_id=1290139011]
 
 [node name="Jugador" parent="." unique_id=751807222 instance=ExtResource("1_bvef3")]
+position = Vector2(-1, 0)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1952108792]
 zoom = Vector2(2, 2)
@@ -46,7 +47,7 @@ position = Vector2(16.5, -4)
 shape = SubResource("RectangleShape2D_jtu2h")
 
 [node name="Plataforma3" type="StaticBody2D" parent="." unique_id=1820884639]
-position = Vector2(-193, 51)
+position = Vector2(-220, 50)
 
 [node name="ColorRect" type="ColorRect" parent="Plataforma3" unique_id=849348434]
 offset_left = -19.0
@@ -56,7 +57,7 @@ offset_bottom = 5.0
 color = Color(0.9483929, 0.31406203, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma3" unique_id=997063221]
-position = Vector2(7, -8.5)
+position = Vector2(7, -8)
 shape = SubResource("RectangleShape2D_11h1l")
 
 [node name="Plataforma4" type="StaticBody2D" parent="." unique_id=590112693]
@@ -88,7 +89,7 @@ position = Vector2(7, -8.5)
 shape = SubResource("RectangleShape2D_11h1l")
 
 [node name="Plataforma6" type="StaticBody2D" parent="." unique_id=2123819690]
-position = Vector2(173, -6)
+position = Vector2(185, -6)
 
 [node name="ColorRect" type="ColorRect" parent="Plataforma6" unique_id=1385634994]
 offset_left = -19.0
